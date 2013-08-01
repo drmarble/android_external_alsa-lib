@@ -61,6 +61,9 @@ LOCAL_CFLAGS := \
 	-DALSA_PLUGIN_DIR=\"/system/usr/lib/alsa-lib\" \
 	-DALSA_DEVICE_DIRECTORY=\"/dev/snd/\"
 
+# Don't treat link-time warnings as errors
+LOCAL_LDFLAGS += -Wl,--no-fatal-warnings
+
 LOCAL_SRC_FILES := $(sort $(call all-c-files-under, src))
 
 # It is easier to exclude the ones we don't want...
