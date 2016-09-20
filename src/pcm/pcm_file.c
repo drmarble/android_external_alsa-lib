@@ -33,6 +33,10 @@
 #include "pcm_local.h"
 #include "pcm_plugin.h"
 
+//from bionic/libc/inc/stdio.h
+int	 pclose(FILE *);
+FILE	*popen(const char *, const char *);
+
 #ifndef PIC
 /* entry for static linking */
 const char *_snd_module_pcm_file = "";
